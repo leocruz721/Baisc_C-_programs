@@ -1,0 +1,7 @@
+C:\Users\leoja\Documents\Baisc_C-_programs\AccountintAssignment\AccountintAssignment\bin\Debug\AccountintAssignment.exe.config
+C:\Users\leoja\Documents\Baisc_C-_programs\AccountintAssignment\AccountintAssignment\bin\Debug\AccountintAssignment.exe
+C:\Users\leoja\Documents\Baisc_C-_programs\AccountintAssignment\AccountintAssignment\bin\Debug\AccountintAssignment.pdb
+C:\Users\leoja\Documents\Baisc_C-_programs\AccountintAssignment\AccountintAssignment\obj\Debug\AccountintAssignment.csproj.AssemblyReference.cache
+C:\Users\leoja\Documents\Baisc_C-_programs\AccountintAssignment\AccountintAssignment\obj\Debug\AccountintAssignment.csproj.CoreCompileInputs.cache
+C:\Users\leoja\Documents\Baisc_C-_programs\AccountintAssignment\AccountintAssignment\obj\Debug\AccountintAssignment.exe
+C:\Users\leoja\Documents\Baisc_C-_programs\AccountintAssignment\AccountintAssignment\obj\Debug\AccountintAssignment.pdb
