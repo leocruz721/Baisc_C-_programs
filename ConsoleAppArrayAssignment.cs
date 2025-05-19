@@ -45,4 +45,35 @@ namespace ArrayAndListIndexSelector
         /// <summary>
         /// Prompts the user to enter a valid index and returns it.
         /// If the user enters an invalid index (e.g., out of bounds or not a number),
-        /// it displays an error and prompts
+        /// it displays an error and prompts again.
+        /// </summary>
+        /// <param name="maxLength">Length of the array or list (used for bounds checking)</param>
+        /// <returns>A valid integer index within bounds</returns>
+        static int GetValidIndexFromUser(int maxLength)
+        {
+            while (true)
+            {
+                Console.Write("Enter an index: ");
+                string input = Console.ReadLine();
+
+                // Try to parse the user's input into an integer
+                if (int.TryParse(input, out int index))
+                {
+                    // Check if the index is within the valid range
+                    if (index >= 0 && index < maxLength)
+                    {
+                        return index; // Return the valid index
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Invalid index. Please enter a number between 0 and {maxLength - 1}.");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("That is not a valid number. Please try again.");
+                }
+            }
+        }
+    }
+}
