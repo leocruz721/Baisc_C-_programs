@@ -1,52 +1,49 @@
 using System;
 
-namespace AgeToBirthYearApp
+namespace AgeCalculator
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // Display an initial message to the user
-            Console.WriteLine("Please enter your age:");
+            // Ask the user to enter their age
+            Console.Write("Enter your age: ");
 
             try
             {
-                // Read the user's input from the console
-                string input = Console.ReadLine();
+                // Read input from console
+                string userInput = Console.ReadLine();
 
-                // Attempt to convert the input string to an integer
-                int age = Convert.ToInt32(input);
+                // Try to convert the input to an integer
+                int age = Convert.ToInt32(userInput);
 
-                // Check if the age is less than or equal to zero
+                // Check if age is zero or negative
                 if (age <= 0)
                 {
-                    // Display a specific message if the user enters zero or a negative number
-                    Console.WriteLine("Error: Age must be a positive number greater than zero.");
+                    Console.WriteLine("Oops... Age can't be zero or negative. Please enter a valid age.");
                 }
                 else
                 {
-                    // Calculate the birth year by subtracting age from the current year
+                    // Calculate the birth year
                     int currentYear = DateTime.Now.Year;
                     int birthYear = currentYear - age;
 
-                    // Display the birth year to the user
-                    Console.WriteLine($"You were born in approximately {birthYear}.");
+                    // Output the result
+                    Console.WriteLine($"Looks like you were born around {birthYear}.");
                 }
             }
             catch (FormatException)
             {
-                // This block handles input that can't be converted to an integer (e.g., letters or symbols)
-                Console.WriteLine("Error: Please enter a valid number for your age.");
+                // If user enters something that isn't a number
+                Console.WriteLine("That doesn't look like a number. Please enter your age using digits.");
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                // This block catches all other exceptions and displays a general message
-                Console.WriteLine("An unexpected error occurred. Please try again.");
-                // Optionally: Log or show the actual error message for debugging
-                // Console.WriteLine($"Technical details: {ex.Message}");
+                // Catch anything else unexpected
+                Console.WriteLine("Something went wrong. Please try again.");
             }
 
-            // Pause the program before it closes
+            // Keep the console window open until the user presses a key
             Console.WriteLine("Press any key to exit...");
             Console.ReadKey();
         }
